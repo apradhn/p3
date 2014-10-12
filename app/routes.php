@@ -13,5 +13,15 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+
+Route::get('/lorem-ipsum', function() 
+{
+	return View::make('lorem-ipsum');
+});
+
+Route::get('/random-user', function() 
+{
+	return View::make('random-user');
 });
