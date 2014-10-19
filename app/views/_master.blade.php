@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link href="{{ asset('css/starter-template.css') }}" rel="stylesheet">
     	<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+    	@yield('head')
 	</head>
 	<body>
 	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
