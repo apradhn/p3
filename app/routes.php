@@ -1,5 +1,58 @@
 <?php
 
+/**
+ * Function for generating random user data
+ *
+ * @param string $u
+ */
+function generate_users($u) {
+	// Creates a faker object 
+	$faker = Faker\Factory::create();
+
+	$users="";
+
+	$birthdate = Input::get('birthdate');
+
+	$profile = Input::get('profile');
+
+	if ((is_numeric($u)) or ($u == NULL)) {
+		// executes of user input is numeric or null 
+
+		if (($birthdate == 0) and ($profile == 0)) {
+			// Executes if neither birthdate nor profile are selected
+			for ($i=0; $i<$u; $i++) {
+				$users = $faker->name."<br><br>".$users;
+			}
+			return $users;
+
+		} elseif (($birthdate == 1) and ($profile == 0)) {
+			// Executes if only birthdate is selected
+			for ($i=0; $i<$u; $i++) {
+				$users = $faker->name."<br>".$faker->date."<br><br>".$users;
+			}
+			return $users;
+
+		} elseif (($birthdate == 0) and ($profile == 1)) {
+			// Executes if only profile is selected 
+			for ($i=0; $i<$u; $i++) {
+				$users = $faker->name."<br>".$faker->paragraph."<br><br>".$users;
+			}
+			return $users;
+
+		} elseif (($birthdate == 1) and ($profile == 1)) {
+			// Executes if both profile and birthdate are selected
+			for ($i=0; $i<$u; $i++) {
+				$users = $faker->name."<br>".$faker->date."<br>".$faker->paragraph."<br><br>".$users;
+			}
+			return $users;
+		}
+	} else {
+		// executes if user input is a non-numeric string
+		return "invalid input";
+	}
+
+ } 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,6 +71,7 @@ Route::get('/', function()
 
 });
 
+// Logic for Lorem Ipsum Generator
 Route::get('/lorem-ipsum', function() 
 {
 
@@ -60,9 +114,15 @@ Route::get('/lorem-ipsum', function()
 
 });
 
+// Logic for Random User generator
 Route::get('/random-user', function() 
 {
+	// Retrieve number of users 
+	$u_count = Input::get('users');
 
-	return View::make('random-user');
+	$users = generate_users($u_count);
+
+	return View::make('random-user')
+		->with('users', $users);
 
 });
