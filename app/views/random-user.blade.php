@@ -11,7 +11,7 @@
 @section('content')
   <h1>Random User Generator</h1>
   <div>
-    {{ Form::open(array('url' => '/random-user', 'method' => 'GET')) }}
+    {{ Form::open(array('url' => '/random-user', 'method' => 'GET', 'name' => 'random-user')) }}
       {{ Form::label('users', 'How Many Users?') }}
       {{ Form::text('users') }} (Max: 99)
       <br>
@@ -27,5 +27,8 @@
   <div id="users" class="col-sm-8 col-sm-offset-2">
     {{ $users }}
   </div>
+  <script type="text/javascript" language="JavaScript">
+    document.forms['random-user'].elements['users'].focus();
+  </script>  
 @stop
 

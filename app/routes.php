@@ -92,7 +92,7 @@ Route::get('/', function()
 
 });
 
-// Logic for Lorem Ipsum Generator
+
 Route::get('/lorem-ipsum', function() 
 {
 
@@ -100,17 +100,20 @@ Route::get('/lorem-ipsum', function()
 	$p_count = Input::get('paragraphs');
 
 	// Generate random lorem ipsum text 
+	$paragraphs = generate_loremipsum($p_count);
+	
 	return View::make('lorem-ipsum')
-		->with('output', generate_loremipsum($p_count));
+		->with('output', $paragraphs);
 
 });
 
-// Logic for Random User generator
+
 Route::get('/random-user', function() 
 {
 	// Retrieve number of users 
 	$u_count = Input::get('users');
 
+	// Generate random user data
 	$users = generate_users($u_count);
 
 	return View::make('random-user')
