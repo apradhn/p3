@@ -1,7 +1,12 @@
 body {
   padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+label {
+	font-weight: normal;
 }
