@@ -20,7 +20,7 @@
     {{ Form::submit('Generate!', array('class' => 'btn btn-default')) }}
   {{ Form::close() }}
 
-  <div id="output"> 
+  <div id="output" class="col-sm-8 col-sm-offset-2"> 
     {{ $output }}
   </div>
 @stop

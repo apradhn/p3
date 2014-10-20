@@ -1,4 +1,13 @@
 #output {
 	text-align: left;
 	font-size: 16px;
+	margin-top: 15px;
+}
+
+.error {
+	color: #ff2324;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: bold;
+	
 }
