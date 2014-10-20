@@ -15,40 +15,40 @@ function generate_users($u) {
 
 	$profile = Input::get('profile');
 
-	if ((is_numeric($u)) or ($u == NULL)) {
+	if (((is_numeric($u)) or ($u == NULL)) and ($u < 100))  {
 		// executes of user input is numeric or null 
 
 		if (($birthdate == 0) and ($profile == 0)) {
 			// Executes if neither birthdate nor profile are selected
 			for ($i=0; $i<$u; $i++) {
-				$users = $faker->name."<br><br>".$users;
+				$users = "<strong>".$faker->name."</strong><br><br>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 1) and ($profile == 0)) {
 			// Executes if only birthdate is selected
 			for ($i=0; $i<$u; $i++) {
-				$users = $faker->name."<br>".$faker->date."<br><br>".$users;
+				$users = "<strong>".$faker->name."</strong><br>".$faker->date."<br><br>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 0) and ($profile == 1)) {
 			// Executes if only profile is selected 
 			for ($i=0; $i<$u; $i++) {
-				$users = $faker->name."<br>".$faker->paragraph."<br><br>".$users;
+				$users = "<strong>".$faker->name."</strong><br>".$faker->paragraph."<br><br>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 1) and ($profile == 1)) {
 			// Executes if both profile and birthdate are selected
 			for ($i=0; $i<$u; $i++) {
-				$users = $faker->name."<br>".$faker->date."<br>".$faker->paragraph."<br><br>".$users;
+				$users = "<strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."<br><br>".$users;
 			}
 			return $users;
 		}
 	} else {
 		// executes if user input is a non-numeric string
-		return "invalid input";
+		return "<div class='error'>invalid input</div>";
 	}
 
  } 

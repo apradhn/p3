@@ -4,6 +4,10 @@
 	Random User Generator
 @stop
 
+@section('head')
+  <link rel="stylesheet" href="css/random-user.css">
+@stop
+
 @section('content')
   <h1>Random User Generator</h1>
 
@@ -20,7 +24,7 @@
     {{ Form::submit('Generate', array('class' => 'btn btn-default')) }}
   {{ Form::close() }}   
 
-  <div id="users">
+  <div id="users" class="col-sm-8 col-sm-offset-2">
     {{ $users }}
   </div>
 @stop

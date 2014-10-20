@@ -1,0 +1,11 @@
+#users {
+	text-align: left; 
+}
+
+.error {
+	color: #ff2324;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: bold;
+
+}
