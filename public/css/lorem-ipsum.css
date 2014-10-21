@@ -1,4 +1,4 @@
-#output {
+#paragraphs {
 	text-align: left;
 	font-size: 16px;
 	margin-top: 15px;
@@ -9,5 +9,68 @@
 	text-align: center;
 	margin-top: 15px;
 	font-weight: bold;
-	
+
+}
+
+.form {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.form label {
+	padding-bottom: 10px;
+}
+
+.font-size-8 p {
+	font-size: 8px;
+}
+
+.font-size-10 p {
+	font-size: 10px;
+}
+
+.font-size-12 p {
+	font-size: 12px;
+}
+
+.font-size-14 p {
+	font-size: 14px;
+}
+
+.font-size-16 p {
+	font-size: 16px;
+}
+
+.roboto p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.helvetica p {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif; 
+}
+
+.georgia p {
+	font-family: Georgia, serif;
+}
+
+.garamond p {
+	font-family: Garamond, serif;
+}
+
+.two-columns {
+	-webkit-columns: 400px 2;
+	-moz-columns: 400px 2;
+	columns: 400px 2;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+}
+
+.three-columns { 
+	-webkit-columns: 250px 3;
+	-moz-columns: 250px 3;
+	columns: 250px 3;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	column-gap: 1em;
 }
