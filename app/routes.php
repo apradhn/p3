@@ -77,6 +77,21 @@ function font_face($ff) {
 		return 'garamond';
 	}
 }
+
+/**
+ * Returns a the selected user inputs
+ */
+function inputs() {
+	$paragraphs = Input::get('paragraphs');
+	$fontSize = Input::get('font-size');
+	$fontFace = Input::get('font-face');
+	$columns = Input::get('columns');
+
+	$inputs = "Paragraphs: ".$paragraphs." Font Size: ".$fontSize." Font Face: ".$fontFace." Column(s): ".$columns;
+
+	return $inputs; 
+}
+
 /**
  * Returns random user data
  *
@@ -155,12 +170,16 @@ Route::get('/lorem-ipsum', function()
 
 	// Changes the number of columns of paragraphs
 	$columns = columns(Input::get('columns'));
+
+	// Displays selected inputs
+	$inputs = inputs();
 	
 	return View::make('lorem-ipsum')
 		->with('paragraphs', $paragraphs)
 		->with('fontSize', $fontSize)
 		->with('fontFace', $fontFace)
-		->with('columns', $columns);
+		->with('columns', $columns)
+		->with('inputs', $inputs);
 });
 
 

@@ -13,6 +13,7 @@
   <h1>Lorem Ipsum Generator</h1>
 
 	<p>How many paragraphs do you want?</p>
+
   <div class="form col-sm-6 col-sm-offset-4"> 
     {{ Form::open(array('url' => '/lorem-ipsum', 'method' => 'GET', 'name' => 'lorem-ipsum')) }}
       {{ Form::label('paragraphs', 'Paragraphs') }}
@@ -27,13 +28,16 @@
       {{ Form::label('columns', 'Columns') }}
       {{ Form::select('columns', array(1 => 1, 2 => 2, 3 => 3)) }}
       <br>
-      {{ Form::submit('Generate!', array('class' => 'btn btn-default')) }}
+      {{ Form::submit('Generate!', array('class' => 'btn btn-default', 'id' => 'submit')) }}
 
     {{ Form::close() }}
   </div>
+
+  
   <div id="paragraphs" class="col-sm-10 col-sm-offset-1 {{ $fontSize }} {{ $fontFace }} {{ $columns }}"> 
     {{ $paragraphs }}
   </div>
+
   <script type="text/javascript" language="JavaScript">
     document.forms['lorem-ipsum'].elements['paragraphs'].focus();
   </script>
