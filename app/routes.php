@@ -104,30 +104,50 @@ function generate_users($u) {
 	$birthdate = Input::get('birthdate');
 	$profile = Input::get('profile');
 
-	if (((is_numeric($u)) or ($u == NULL)) and ($u < 100))  {
+	if (((is_numeric($u)) or ($u == NULL)) and ($u < 100)) { // Executes of user input is valid 
+		$valid = true;
+	} else $valid = false;
+
+	if (($birthdate == 0) and ($profile == 0)) { // Executes if neither birthdate or profile are selected 
+		$a = true;
+	} else $a = false;
+
+	if (($birthdate == 1) and ($profile == 0)) { // Executes if only birthdate is selected 
+		$b = true;
+	} else $b = false;
+
+	if (($birthdate == 0) and ($profile == 1)) { // Executes if only profile is selected 
+		$c = true;
+	} else $c = false;
+
+	if (($birthdate == 1) and ($profile == 1)) {// Executes if both birthdate and profile are selected 
+		$d = true;
+	} else $d = false;
+
+	if ($valid)  {
 		// executes of user input is numeric or null 
-		if (($birthdate == 0) and ($profile == 0)) {
+		if ($a) {
 			// Executes if neither birthdate nor profile are selected
 			for ($i=0; $i<$u; $i++) {
 				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong></p></div>".$users;
 			}
 			return $users;
 
-		} elseif (($birthdate == 1) and ($profile == 0)) {
+		} elseif ($b) {
 			// Executes if only birthdate is selected
 			for ($i=0; $i<$u; $i++) {
 				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."</p></div>".$users;
 			}
 			return $users;
 
-		} elseif (($birthdate == 0) and ($profile == 1)) {
+		} elseif ($c) {
 			// Executes if only profile is selected 
 			for ($i=0; $i<$u; $i++) {
 				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->paragraph."1</p></div>".$users;
 			}
 			return $users;
 
-		} elseif (($birthdate == 1) and ($profile == 1)) {
+		} elseif ($d) {
 			// Executes if both profile and birthdate are selected
 			for ($i=0; $i<$u; $i++) {
 				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
