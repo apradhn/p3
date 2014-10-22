@@ -15,6 +15,15 @@
       {{ Form::label('users', 'How Many Users?') }}
       {{ Form::text('users') }} (Max: 99)
       <br>
+      Male or Female?
+      <br>
+      {{ Form::radio('gender', 'maleAndFemale' ) }}
+      {{ Form::label('both', 'Both') }}
+      {{ Form::radio('gender', 'female') }}
+      {{ Form::label('female', 'Female') }}
+      {{ Form::radio('gender', 'male') }}
+      {{ Form::label('male', 'Male') }}
+      <br>
       {{ Form::checkbox('birthdate') }}
       {{ Form::label('birthdate', 'Birthdate') }}
       <br>
