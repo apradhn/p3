@@ -109,28 +109,28 @@ function generate_users($u) {
 		if (($birthdate == 0) and ($profile == 0)) {
 			// Executes if neither birthdate nor profile are selected
 			for ($i=0; $i<$u; $i++) {
-				$users = "<strong>".$faker->name."</strong><br><br>".$users;
+				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong></p></div>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 1) and ($profile == 0)) {
 			// Executes if only birthdate is selected
 			for ($i=0; $i<$u; $i++) {
-				$users = "<strong>".$faker->name."</strong><br>".$faker->date."<br><br>".$users;
+				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."</p></div>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 0) and ($profile == 1)) {
 			// Executes if only profile is selected 
 			for ($i=0; $i<$u; $i++) {
-				$users = "<strong>".$faker->name."</strong><br>".$faker->paragraph."<br><br>".$users;
+				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->paragraph."1</p></div>".$users;
 			}
 			return $users;
 
 		} elseif (($birthdate == 1) and ($profile == 1)) {
 			// Executes if both profile and birthdate are selected
 			for ($i=0; $i<$u; $i++) {
-				$users = "<strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."<br><br>".$users;
+				$users = "<div class='row'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
 			}
 			return $users;
 		}
@@ -139,6 +139,21 @@ function generate_users($u) {
 		return "<div class='error'>invalid input</div>";
 	}
  } 
+
+ /**
+  * Generates a random profile photo 
+  * 
+  * @param int $i
+  */
+/* function generate_image($i, $u) {
+
+		$faker = Faker\Factory::create();
+
+		$image = $faker->imageURL(200, 200, 'cats');
+
+		return "<img src=".$image.">";
+}
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -190,6 +205,11 @@ Route::get('/random-user', function()
 
 	// Generate random user data
 	$users = generate_users($u_count);
+
+	// Generates a profile photo 
+	$faker = Faker\Factory::create();
+
+	$image = $faker->imageUrl;
 
 	return View::make('random-user')
 		->with('users', $users);
