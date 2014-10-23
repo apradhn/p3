@@ -1,4 +1,14 @@
 <?php
+/*
+|--------------------------------------------------------------------------
+| Application Functions
+|--------------------------------------------------------------------------
+|
+| Functions used to power the Lorem Ipsum and 
+| Random User generators.
+|
+*/
+
 /**
  * Returns random Lorem Ipsum text
  * 
