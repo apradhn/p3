@@ -93,13 +93,40 @@ function inputs() {
 }
 
 /**
+ * Returns a locale
+ * 
+ * @param string $loc
+ *
+ *	function locale($l) {
+ *		if ($locale == 'any') {
+ *			return 'en_EN';
+ *		} 
+ *		elseif ($locale == 'us') {
+ *			return = 'en_US'; 
+ *		}
+ *		elseif ($locale == 'es') {
+ *			return = 'es_ES';
+ *		}
+ *		elseif ($locale == 'fr') {
+ *			return
+ *		}
+ *	}
+ */
+
+/**
  * Returns random user data
  *
  * @param string | int $u
  */
 function generate_users($u) {
+
+	if (Input::get('locale') == NULL) {
+		$locale = 'en_EN';
+	}
+	else $locale = Input::get('locale');
+	
 	// Creates a faker object 
-	$faker = Faker\Factory::create();
+	$faker = Faker\Factory::create($locale);
 	$users="";
 	$birthdate = Input::get('birthdate');
 	$profile = Input::get('profile');
@@ -300,11 +327,6 @@ Route::get('/random-user', function()
 
 	// Generate random user data
 	$users = generate_users($u_count);
-
-	// Generates a profile photo 
-	$faker = Faker\Factory::create();
-
-	$image = $faker->imageUrl;
 
 	return View::make('random-user')
 		->with('users', $users);
