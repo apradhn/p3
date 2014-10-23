@@ -70,7 +70,7 @@
       {{ Form::close() }}   
     </div>
   </div>
-  <div id="users" class="col-sm-8 col-sm-offset-2">
+  <div class="users col-sm-8 col-sm-offset-2">
 
     {{ $users }}
     

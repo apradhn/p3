@@ -45,8 +45,9 @@ label {
   backround-color: #F8F8F8;
 }
 
-#users {
+.users {
 	text-align: left; 
+  margin-top: 50px;
 }
 
 .error {
@@ -58,8 +59,6 @@ label {
 }
 
 .row img {
-  float: left;
-  clear: left;
   margin-right: 20px;
   margin-bottom: 40px;
 }
@@ -71,4 +70,8 @@ label {
 
 .row p {
   padding: 10px;
+}
+
+.cell {
+  margin-bottom: 50px;
 }

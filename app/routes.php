@@ -93,27 +93,6 @@ function inputs() {
 }
 
 /**
- * Returns a locale
- * 
- * @param string $loc
- *
- *	function locale($l) {
- *		if ($locale == 'any') {
- *			return 'en_EN';
- *		} 
- *		elseif ($locale == 'us') {
- *			return = 'en_US'; 
- *		}
- *		elseif ($locale == 'es') {
- *			return = 'es_ES';
- *		}
- *		elseif ($locale == 'fr') {
- *			return
- *		}
- *	}
- */
-
-/**
  * Returns random user data
  *
  * @param string | int $u
@@ -173,28 +152,28 @@ function generate_users($u) {
 			if ($a) {
 				// Executes if neither birthdate nor profile are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6 center-block'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong></p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong></p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($b) {
 				// Executes if only birthdate is selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($c) {
 				// Executes if only profile is selected 
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->paragraph."1</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->paragraph."1</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($d) {
 				// Executes if both profile and birthdate are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
 				}
 				return $users;
 			}
@@ -203,28 +182,28 @@ function generate_users($u) {
 			if ($a) {
 				// Executes if neither birthdate nor profile are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong></p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong></p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($b) {
 				// Executes if only birthdate is selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->date."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->date."</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($c) {
 				// Executes if only profile is selected 
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->paragraph."1</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->paragraph."1</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($d) {
 				// Executes if both profile and birthdate are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('female')."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
 				}
 				return $users;
 			}
@@ -233,28 +212,28 @@ function generate_users($u) {
 			if ($a) {
 				// Executes if neither birthdate nor profile are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong></p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong></p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($b) {
 				// Executes if only birthdate is selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->date."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->date."</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($c) {
 				// Executes if only profile is selected 
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->paragraph."1</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->paragraph."1</p></div>".$users;
 				}
 				return $users;
 			} 
 			elseif ($d) {
 				// Executes if both profile and birthdate are selected
 				for ($i=0; $i<$u; $i++) {
-					$users = "<div class='col-sm-6'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
+					$users = "<div class='col-sm-4 cell'><img alt='cat' class='img-circle' src='http://www.lorempixel.com/200/200/cats/".$faker->randomDigit."'><p><strong>".$faker->name('male')."</strong><br>".$faker->date."<br>".$faker->paragraph."</p></div>".$users;
 				}
 				return $users;
 			}
