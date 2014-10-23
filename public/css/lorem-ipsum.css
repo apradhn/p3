@@ -8,6 +8,14 @@
 	font-size: 16px;
 }
 
+a {
+	color: #3f8c63;
+}
+
+a:hover {
+	color: #2e6347;
+}
+
 label {
 	padding-left: 15px;
 	font-weight: bold;

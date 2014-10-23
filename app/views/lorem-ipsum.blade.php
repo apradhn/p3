@@ -6,6 +6,7 @@
 
 @section('head')
   <link rel="stylesheet" href='{{ asset('css/lorem-ipsum.css') }}' />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 @stop
 
 @section('masthead')
@@ -19,6 +20,9 @@
 
 @section('content')
   <div class="container content">
+    <div class="col-sm-2">
+    <a href="/"><i class="fa fa-angle-double-left fa-lg"></i> Back to p3</a>
+    </div>
     <div class="form col-sm-12">
       {{ Form::open(array('url' => '/lorem-ipsum', 'method' => 'GET', 'name' => 'lorem-ipsum')) }}
         <div class="col-sm-2">
