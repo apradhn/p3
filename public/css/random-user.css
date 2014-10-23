@@ -1,3 +1,50 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.jumbotron {
+  background-color: #4DAF7C;
+  color: #F8F8F8;
+}
+
+.content {
+  background-color: #F8F8F8;
+  font-size: 16px;
+}
+
+a {
+  color: #3f8c63;
+}
+
+a:hover {
+  color: #2e6347;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+label {
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.btn-default {
+  background-color: #4DAF7C;
+  color: #F8F8F8;
+  border: 1px solid #48a574;
+}
+
+.btn-default:hover {
+  background-color: #48a574;
+  color: #e8e8e8;
+  border 1px solid: #3f8c63;
+}
+
+.paragraphs {
+  backround-color: #F8F8F8;
+}
+
 #users {
 	text-align: left; 
 }
