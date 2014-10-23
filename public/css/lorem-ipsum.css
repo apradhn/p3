@@ -10,10 +10,21 @@
 
 label {
 	padding-left: 15px;
+	font-weight: bold;
+	color: #555555;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
 }
 
 input {
-	margin-left: 15px;
+	display: block;
+	margin: 0 auto;
+}
+
+select {
+	display: block;
+	margin: 0 auto;
 }
 
 .btn-default {
@@ -28,10 +39,11 @@ input {
 	border 1px solid: #3f8c63;
 }
 
-#paragraphs {
+.paragraphs {
 	text-align: left;
 	font-size: 16px;
-	margin-top: 15px;
+	margin: 50px 50px;
+
 }
 
 .error {
