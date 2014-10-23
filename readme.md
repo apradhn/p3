@@ -24,5 +24,7 @@ Cat photos provided by [lorempixel.com](http://lorempixel.com)
 ----
 ## Outside Code
 
+* fzaninotto/faker: [https://packagist.org/packages/fzaninotto/faker](https://packagist.org/packages/fzaninotto/faker)
+* badcow/lorem-ipsum: [https://packagist.org/packages/badcow/lorem-ipsum](https://packagist.org/packages/badcow/lorem-ipsum)
 * Bootstrap 3.2.0: [http://getbootstrap.com](http://getbootstrap.com)
 * FontAwesome: [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
