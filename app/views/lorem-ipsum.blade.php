@@ -16,6 +16,7 @@
       <p>How many paragraphs do you want?</p>
     </div>
   </div>
+  <div class="separator"></div>
 @stop
 
 @section('content')
@@ -42,7 +43,7 @@
         {{ Form::select('columns', array(1 => 1, 2 => 2, 3 => 3)) }}
         </div>
         <div class="col-sm-2">
-        {{ Form::submit('Generate!', array('class' => 'btn btn-default', 'id' => 'submit')) }}
+        {{ Form::submit('Generate!', array('class' => 'btn btn-default btn-lg', 'id' => 'submit')) }}
         </div>
       {{ Form::close() }}
     </div>

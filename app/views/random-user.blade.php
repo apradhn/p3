@@ -16,6 +16,8 @@
       <p>Generate random user data for your applications</p>
     </div>
   </div>
+  <div class="separator"></div>
+
 @stop
 
 @section('content')
@@ -65,7 +67,7 @@
         {{ Form::checkbox('profile') }}       
         </div>
         <div class="col-sm-2">
-        {{ Form::submit('Generate', array('class' => 'btn btn-default')) }}
+        {{ Form::submit('Generate', array('class' => 'btn btn-default btn-lg')) }}
         </div>
       {{ Form::close() }}   
     </div>
