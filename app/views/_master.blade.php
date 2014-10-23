@@ -33,11 +33,11 @@
 	      </div>
 	    </div>
 
-	    <div class="container">
-      		<div class="starter-template">
-      			@yield('content')
-	      	</div>
-	    </div>
+	    @yield('masthead')
+
+  		<div class="starter-template">
+  			@yield('content')
+      	</div>
 	    <!-- Bootstrap core Javascript -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>    	    

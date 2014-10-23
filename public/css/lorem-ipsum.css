@@ -1,3 +1,33 @@
+.jumbotron {
+	background-color: #4DAF7C;
+	color: #F8F8F8;
+}
+
+.content {
+	background-color: #F8F8F8;
+	font-size: 16px;
+}
+
+label {
+	padding-left: 15px;
+}
+
+input {
+	margin-left: 15px;
+}
+
+.btn-default {
+	background-color: #4DAF7C;
+	color: #F8F8F8;
+	border: 1px solid #48a574;
+}
+
+.btn-default:hover {
+	background-color: #48a574;
+	color: #e8e8e8;
+	border 1px solid: #3f8c63;
+}
+
 #paragraphs {
 	text-align: left;
 	font-size: 16px;
