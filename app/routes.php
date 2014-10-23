@@ -309,3 +309,4 @@ Route::get('/random-user', function()
 	return View::make('random-user')
 		->with('users', $users);
 });
+ 

@@ -1,0 +1,30 @@
+body { 
+	background-color: #4DAF7C;
+	color: #F8F8F8;
+}
+
+.container {
+	max-width: 800px;
+}
+
+h1 {
+	color: #F8F8F8;
+}
+
+.btn-default {
+	border: 1px solid #F8F8F8;
+	background-color: #4DAF7C;
+	padding: 20px;
+	color: #F8F8F8;
+}
+
+.btn-default:hover {
+	border: 1px solid #F8F8F8;
+	color: #4DAF7C;
+}
+
+.col-sm-6 p {
+	text-align: left;
+	padding: 30px 50px;
+	font-size: 16px;
+}
