@@ -29,7 +29,7 @@
       {{ Form::open(array('url' => '/random-user', 'method' => 'GET', 'name' => 'random-user')) }}
         <div class="col-sm-2">
         {{ Form::label('users', 'How Many Users?') }}
-        {{ Form::text('users') }} 
+        {{ Form::text('users', 10, array('size' => 5)) }} 
         <p>(Max: 99)</p>
        </div>
        <div class="col-sm-2">
@@ -38,22 +38,22 @@
        </div>
 
        <div class="col-sm-3">
-          {{ Form::label('MorF', 'Male or Female?') }}
+          {{ Form::label('gender', 'Male or Female?') }}
         <br>
         <div class="col-xs-4">
           {{ Form::label('both', 'Both') }}
           <br>
-          {{ Form::radio('gender', 'maleAndFemale', true ) }}
+          {{ Form::radio('gender', 'both', true, array('id' => 'both')) }}
       
         </div>
         <div class="col-xs-4">
           {{ Form::label('female', 'Female') }}
-          {{ Form::radio('gender', 'female') }}            
+          {{ Form::radio('gender', 'female', false, array('id' => 'female')); }}            
         </div>
         <div class="col-xs-4">
           {{ Form::label('male', 'Male') }}           
           <br>
-          {{ Form::radio('gender', 'male') }}
+          {{ Form::radio('gender', 'male', false, array('id' => 'male')) }}
       </div>
       </div>
         <div class="col-sm-1">
