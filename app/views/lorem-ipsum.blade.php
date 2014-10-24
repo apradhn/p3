@@ -33,7 +33,7 @@
         </div>
         <div class="col-sm-2">
         {{ Form::label('font-size', 'Font Size') }}
-        {{ Form::select('font-size', array('8px' => '8 px', '10px' => '10 px', '12px' => '12 px', '14px' => '14 pt', '16px' => '16 px'), '16px') }}
+        {{ Form::select('font-size', array('8px' => '8 px', '10px' => '10 px', '12px' => '12 px', '14px' => '14 px', '16px' => '16 px'), '16px') }}
         </div>
         <div class="col-sm-2">
         {{ Form::label('font-face', 'Font Face') }}
