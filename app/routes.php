@@ -17,7 +17,7 @@
  */
 function generate_loremipsum($p) {
 	// checks for invalid user input
-	if ( (is_numeric($p)) or ($p == NULL) ) 
+	if ( ((is_numeric($p)) or ($p == NULL)) and ($p < 100) ) 
 	{ 
 		// create Lorem Ipsum generator 
 		$generator = new Badcow\LoremIpsum\Generator();
@@ -30,7 +30,7 @@ function generate_loremipsum($p) {
 	}
 	// Checks if user entered a non-numeric string 
 	elseif (is_string($p)) {
-		return "<div class='error'>Invalid Input</div>";
+		return "<div class='error'>Invalid Input!</div>";
 	} 
 }
 
@@ -243,7 +243,7 @@ function generate_users($u) {
 				return $users;
 			}
 		} 
-	} else return "<div class='error'>invalid input</div>";  // executes if user input is a non-numeric string
+	} else return "<div class='error'>Invalid input!</div>";  // executes if user input is a non-numeric string
  } 
 
 /*

@@ -68,9 +68,15 @@ select {
 .error {
 	color: #ff2324;
 	text-align: center;
-	margin-top: 15px;
 	font-weight: bold;
-
+	font-size: 16px;
+	border: 1px solid #ff2324;
+	border-radius: 5px;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	white-space: nowrap;
+	margin: 0 auto;
 }
 
 .form {
