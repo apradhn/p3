@@ -15,6 +15,7 @@ This application provides two random text generators
 ----
 ## Demo
 
+* Jing Screencast: [http://screencast.com/t/FvMr7YxpXr](http://screencast.com/t/FvMr7YxpXr)
 
 ----
 ## Details for Teaching Team
