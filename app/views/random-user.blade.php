@@ -33,12 +33,12 @@
         <p>(Max: 99)</p>
        </div>
        <div class="col-sm-2">
-        {{ Form::label('Locale', 'Locale') }}
+        {{ Form::label('locale', 'Locale') }}
         {{ Form::select('locale', array('en_EN' => 'Any', 'en_US' => 'United States', 'es_ES' => 'Spain', 'fr_FR' => 'France', 'ru_RU' => 'Russia', 'ja_JP' => 'Japan'), 'en_EN') }}
        </div>
 
        <div class="col-sm-3">
-          {{ Form::label('gender', 'Male or Female?') }}
+          Male or Female?
         <br>
         <div class="col-xs-4">
           {{ Form::label('both', 'Both') }}
