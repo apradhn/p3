@@ -29,6 +29,7 @@
         <div class="col-sm-2">
         {{ Form::label('paragraphs', 'Paragraphs') }}
         {{ Form::text('paragraphs', 3, array('size' => 5)) }}
+        <p>(Max 99)</p>
         </div>
         <div class="col-sm-2">
         {{ Form::label('font-size', 'Font Size') }}
