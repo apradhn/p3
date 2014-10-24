@@ -118,7 +118,7 @@ function generate_users($u) {
 	$gender = Input::get('gender');
 
 	// Condition table for gender
-	if($gender == 'maleAndFemale') {
+	if($gender == 'both') {
 		$both= true;
 	} else $both = false;
 
